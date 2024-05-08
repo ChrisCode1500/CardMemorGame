@@ -8,7 +8,6 @@ namespace CardMemoryGame
 {
     public class PlayingCard
     {
-        // we are using the enumerations from the CardEnums.cs class
         public Suit Suit { get; }
         public Rank Rank { get; }
 
