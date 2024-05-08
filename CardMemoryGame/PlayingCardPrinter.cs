@@ -17,8 +17,8 @@ namespace CardMemoryGame
             string relativePath = @"card-deck.png";
             string fullPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, relativePath);
             Image atlas = Image.FromFile(fullPath);
-            int cardWidth = (atlas.Width / 13); // Assuming there are 13 cards per row.
-            int cardHeight = atlas.Height / 5; // Assuming there are 4 rows of cards + space for jokers/backside.
+            int cardWidth = (atlas.Width / 13);
+            int cardHeight = atlas.Height / 5; 
 
             for (int suit = 0; suit < 4; suit++)
             {
@@ -33,8 +33,6 @@ namespace CardMemoryGame
                     cardImages.Add(((Suit)suit, (Rank)rank), cardImage);
                 }
             }
-            // create the back of the file:
-            // the back of the card is the third card from the left on the fifth row at the bottom
             backOfCard = CropImage(
                 atlas,
                 new Rectangle(2 * cardWidth, 4 * cardHeight, cardWidth, cardHeight)
