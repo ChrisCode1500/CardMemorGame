@@ -15,6 +15,5 @@ namespace CardMemoryGame
             cards = new List<PlayingCard>();
           
         }
-        // implement the rest of this class as you see fit.
     }
 }
